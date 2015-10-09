@@ -5,33 +5,87 @@ body {
     margin: 0px;
 }
 
-.box1 {
-    float: left;
-    width: 100%;
-    height: 100px;
-    transform: translateX(-210px);
-    margin-right: -210px;
-    background-color: red;
+.pic-focus {
+    position: relative;
+    margin: 100px auto;
+    width: 748px;
+    height: 170px;
+    overflow: hidden;
 }
 
-.box2 {
+.pic-list {
     float: left;
-    margin-left: 10px;
-    width: 200px;
-    height: 100px;
-    background-color: blue;
+    margin: 0;
+    padding: 0;
+    width: 612px;
+    list-style: none;
+    transition: margin-top 1s;
+    -webkit-transition: margin-top 1s;
+    -moz-transition: margin-top 1s;
+    -o-transition: margin-top 1s;
+    overflow: hidden;
 }
 
-.box3 {
+.pic-list > li {
+    display: block;
+    width: 612px;
+    height: 170px;
+}
+
+.pic-list > li > img {
+    width: 612px;
+    height: 170px;
+}
+
+.pic-ctrl {
+    position: relative;
     float: right;
-    margin-left: 10px;
-    width: 200px;
-    height: 100px;
-    background-color: red;
+    width: 121px;
+    height: 170px;
 }
 
-.box4 {
-    margin-right: 210px;
-    height: 100px;
-    background-color: yellow;
+.pic-ctrl > em {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 11;
+    display: block;
+    width: 121px;
+    height: 44px;
+    border: 5px solid #77D3BE;
+    transition: top 0.5s;
+    -webkit-transition: top 0.5s;
+    -moz-transition: top 0.5s;
+    -o-transition: top 0.5s;
+}
+
+.ctrl-list {
+    position: absolute;
+    top: 0;
+    right: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.ctrl-list > li {
+    margin-top: 4px;
+    width: 121px;
+    height: 44px;
+    border: 5px solid #D3D3D3;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+    -webkit-transition: opacity 0.5s;
+    -moz-transition: opacity 0.5s;
+    -o-transition: opacity 0.5s;
+}
+
+.ctrl-list > li:nth-child(1) {
+    margin-top: 0;
+    opacity: 1;
+}
+
+.ctrl-list > li > img {
+    width: 121px;
+    height: 44px;
 }
