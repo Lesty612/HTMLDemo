@@ -1,0 +1,88 @@
+html,
+body {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+.accordion-menu {
+    margin: 0 auto;
+    padding: 10px;
+    width: 500px;
+
+    font-size: 12px;
+    color: #434343;
+    background-color: #fff;
+}
+
+.menu-section > h2 {
+    position: relative;
+    margin: 5px 0;
+}
+
+.menu-section > h2:before {
+    position: absolute;
+    top: 15px;
+    right: 10px;
+    content: "";
+    border: 5px solid #fff;
+    border-color: #fff transparent transparent;
+}
+
+.menu-section:target > h2:before {
+    border: 5px solid #fff;
+    border-color: transparent transparent transparent #fff;
+}
+
+.menu-section > h2 > a{
+    display: block;
+    padding: 10px;
+
+    font-size: 13px;
+    font-weight: normal;
+    color: #424242;
+    text-decoration: none;
+    text-shadow: 2px 2px 2px #aeaeae;
+
+    border-radius: 5px;
+    background-color: #8f8f8f;
+    background-image: linear-gradient(top, #cecece, #8f8f8f);
+    background-image: -moz-linear-gradient(top, #cecece, #8f8f8f);
+    background-image: -webkit-linear-gradient(top, #cecece, #8f8f8f);
+    background-image: -o-linear-gradient(top, #cecece, #8f8f8f);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#cecece), to(#8f8f8f));
+
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -o-transition: color 0.5s;
+    transition: color 0.5s;
+}
+
+.menu-section:target > h2 > a,
+.menu-section > h2 > a:hover,
+.menu-section > h2 > a:active{
+    color: #fff;
+    background-color: #2288dd;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#6bb2ff), to(#2288dd));
+    background-image: -webkit-linear-gradient(top, #6bb2ff, #2288dd);
+    background-image: -moz-linear-gradient(top, #6bb2ff, #2288dd);
+    background-image: -o-linear-gradient(top, #6bb2ff, #2288dd);
+    background-image: linear-gradient(top, #6bb2ff, #2288dd);
+}
+
+.menu-section > p {
+    height: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 10px;
+
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -o-transition: height 0.5s;
+    transition: height 0.5s;
+}
+
+.menu-section:target > p {
+    height: 100px;
+    overflow: hidden;
+}
