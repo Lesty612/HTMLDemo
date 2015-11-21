@@ -1,0 +1,56 @@
+html,
+body {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.main-contain {
+    width: 800px;
+    margin: 10px auto;
+}
+
+.main-contain > div {
+    margin-top: 50px;
+}
+
+.triangle1 {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid red;
+}
+
+.triangle2 {
+    font-size: 70px;
+    color: #4DC6F7;
+    text-shadow: 0px -5px 5px rgba(0,0,0,0.15);
+}
+
+.triangle3 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/*这里用了after伪元素来实现顶层元素，你也可以直接用一个新的div*/
+.triangle3:after {
+    position: absolute;
+    /*根据top和left来移动元素，改变它的朝向*/
+    top: -25px;
+    left: 25px;
+    display: block;
+    width: 50px;
+    height: 50px;
+    content: '';
+    background-color: red;
+    /*旋转45度*/
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
