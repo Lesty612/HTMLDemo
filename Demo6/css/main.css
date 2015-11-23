@@ -1,0 +1,151 @@
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.wrap {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    background-color: #55B599;
+}
+
+.spinner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    width: 100px;
+    height: 30px;
+    /*解决inline-block空白间隙问题*/
+    font-size: 0px;
+
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.spinner > em {
+    display: inline-block;
+    margin-left: 4px;
+    width: 10px;
+    height: 100%;
+    background: #fff;
+
+    -webkit-animation: wave 1.2s infinite ease-in-out;
+    animation: wave 1.2s infinite ease-in-out;
+}
+
+.spinner > .wave2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.spinner > .wave3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.spinner > .wave4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.spinner > .wave5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+@-webkit-keyframes wave {
+    0%, 40%, 100% {
+        transform: scaleY(1.0);
+    }
+    60% {
+        transform: scaleY(2.2);
+    }
+}
+
+@-moz-keyframes wave {
+    0%, 40%, 100% {
+        transform: scaleY(1.0);
+    }
+    60% {
+        transform: scaleY(2.2);
+    }
+}
+
+@keyframes wave {
+    0%, 40%, 100% {
+        transform: scaleY(1.0);
+    }
+    60% {
+        transform: scaleY(2.2);
+    }
+}
+
+.spinner-circle {
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    z-index: 3;
+    width: 60px;
+    height: 60px;
+
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.spinner-circle > em {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.6;
+
+    -webkit-animation: circleScale 2.0s infinite ease-in-out;
+    animation: circleScale 2.0s infinite ease-in-out;
+}
+
+.spinner-circle > .circle2 {
+    animation-delay: 1.0s;
+}
+
+@-webkit-keyframes circleScale {
+    0%, 100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes circleScale {
+    0%, 100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
+
+@keyframes circleScale {
+    0%, 100% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1);
+    }
+}
