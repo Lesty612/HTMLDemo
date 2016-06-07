@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="Lesty, lesty612@163.com">
+    <title>loading页面</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+
+<body>
+	<!-- 计算时间差 -->
+	<button class="btn" id="startTiming">开始计时</button>
+	<button class="btn" id="pauseTiming">暂停计时</button>
+	<h2>当前时间与2008/8/8 08:08:08的相差秒数: <span id="diffTime"></span></h2>
+
+	<!-- 单行文本实现两端对齐 -->
+	<p style="width: 300px;text-align: justify;">哈哈<span class="justify_fix"></span></p>
+
+	<!-- 弹出图片 -->
+	<button class="btn" id="popPic">点击弹出图片</button>
+	<div class="img-contain" id="imgContain" style="display: none;">
+		<nav class="close" id="close"><span>X</span></nav>
+		<div class="wrap"></div>
+		<div class="img-box">
+			<img src="./img/linlin.png">
+			<img src="javascript:alert('123')">
+		</div>
+	</div>
+</body>
+<script src="js/main.js"></script>
+</html>
