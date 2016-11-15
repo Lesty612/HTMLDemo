@@ -103,4 +103,4 @@ function regEvent() {
 }
 
 // 绑定onload事件
-window.onload = init();
+window.onload = init;

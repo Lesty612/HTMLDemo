@@ -1,0 +1,109 @@
+html,
+body {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.flex {
+    height: 50px;
+
+    font-size: 14px;
+    border: 1px solid #555;
+
+    display: -webkit-flex;
+    -webkit-flex-direction: row;
+    display: flex;
+    flex-direction: row;
+}
+
+.flex > div {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+
+    -webkit-transition: flex-grow 0.6s ease-out;
+    transition: flex-grow 0.6s ease-out;
+}
+
+.flex > div:nth-child(1) {
+    background-color: #009246;
+}
+
+.flex > div:nth-child(2) {
+    background-color: #F1F2F1;
+}
+
+.flex > div:nth-child(3) {
+    background-color: #CE2B37;
+}
+
+.flex > div:hover {
+    flex-grow: 2;
+}
+
+/*内容区域*/
+/*移动先行*/
+.main-contain {
+    min-height: 350px;
+
+    display: -webkit-flex;
+    display: flex;
+
+    -webkit-flex-direction: column;
+    flex-direction: column;
+
+    text-align: center;
+}
+
+.main-contain > article,
+.main-contain > nav,
+.main-contain > aside,
+footer {
+    margin-top: 4px;
+    padding: 5px;
+
+    border: 1px solid #cccc33;
+    border-radius: 7px;
+}
+
+.main-contain > article {
+    -webkit-flex: 3 6 60%;
+    flex: 3 6 60%;
+    background-color: #dddd88;
+}
+
+.main-contain > nav,
+.main-contain > aside {
+    -webkit-flex: 1 6 20%;
+    flex: 1 6 20%;
+
+    max-height: 30px;
+    background-color: #ccccff;
+}
+
+/*大屏幕*/
+@media(min-width: 640px) {
+    .main-contain {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+    }
+
+    .main-contain > article {
+        -webkit-order: 2;
+        order: 2;
+    }
+
+    .main-contain > nav {
+        max-height: none;
+        -webkit-order: 1;
+        order: 1;
+    }
+
+    .main-contain > aside {
+        max-height: none;
+        -webkit-order: 3;
+        order: 3;
+    }
+}
